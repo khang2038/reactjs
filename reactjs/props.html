@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>React</title>
+    <script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin></script>
+      <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin></script>
+      <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+</head>
+<body>
+    <div id="root"></div>
+    <script type="text/babel">
+        function Postitem(props){
+            return (
+                <div className="post-item">
+                    <img src={props.image} alt={props.title} />
+                    <p>{props.desscription}</p>
+                </div>
+            )
+        }
+        
+        function App() {
+            return(
+                <div id="wrapper">
+                    <Postitem
+                        title="c#(.net)-Tương tác vứi dile Excel"
+                        image="data:image/jpeg;base64,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"
+                        desscription="Bạn có kiến thức ngôn ngữ c#"
+                    />
+                    
+                </div>
+            )
+        }
+        ReactDOM.render(<App/>,document.getElementById('root'))
+
+
+    </script>
+</body>
+</html>
